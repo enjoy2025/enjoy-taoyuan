@@ -1,25 +1,24 @@
 package com.taoyuan.enjoy.framework.common.enums;
 
 /**
- * 通用启用状态枚举
- * 适用于：用户、角色、菜单、配置等
+ * 逻辑删除标记枚举
  */
-public enum StatusEnum {
+public enum DeletedEnum {
 
     /**
-     * 启用
+     * 未删除
      */
-    ENABLED(1, "启用"),
+    NO(0, "未删除"),
 
     /**
-     * 禁用
+     * 已删除
      */
-    DISABLED(0, "禁用");
+    YES(1, "已删除");
 
     private final int code;
     private final String desc;
 
-    StatusEnum(int code, String desc) {
+    DeletedEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
     }

@@ -22,4 +22,26 @@
         <revision>1.0-SNAPSHOT</revision>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- 内部模块版本管理 -->
+            <dependency>
+                <groupId>com.taoyuan</groupId>
+                <artifactId>enjoy-framework-bom</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 外部模块版本管理 -->
+            <dependency>
+                <groupId>com.taoyuan</groupId>
+                <artifactId>enjoy-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
